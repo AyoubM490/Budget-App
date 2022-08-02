@@ -6,16 +6,14 @@ class RecordsController < ApplicationController
     @records = Record.where(author_ir: current_user.id).where(groups_id: params[:group_id])
   end
 
-  def show
-  end
+  def show; end
 
   def new
     set_group
     @record = Record.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     set_group
@@ -23,7 +21,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.save
-        format.html { redirect_to group_records_path(@group), notice: "Record was successfully created." }
+        format.html { redirect_to group_records_path(@group), notice: 'Record was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -35,7 +33,7 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to record_url(@record), notice: "Record was successfully updated." }
+        format.html { redirect_to record_url(@record), notice: 'Record was successfully updated.' }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -47,7 +45,7 @@ class RecordsController < ApplicationController
     @record.destroy
 
     respond_to do |format|
-      format.html { redirect_to group_records_path(@group), notice: "Record was successfully destroyed." }
+      format.html { redirect_to group_records_path(@group), notice: 'Record was successfully destroyed.' }
     end
   end
 

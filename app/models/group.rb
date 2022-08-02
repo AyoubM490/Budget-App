@@ -5,7 +5,7 @@ class Group < ApplicationRecord
   validates :image, presence: true
 
   has_many :records, dependent: :delete_all
-  belongs_to :author, class_name: "User"
+  belongs_to :author, class_name: 'User'
 
   def total_records
     records.size

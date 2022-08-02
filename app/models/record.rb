@@ -4,5 +4,5 @@ class Record < ApplicationRecord
 
   has_many :groups, through: :records
   belongs_to :group
-  belongs_to :author, class_name: "User"
+  belongs_to :author, class_name: 'User'
 end

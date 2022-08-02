@@ -13,15 +13,14 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @group = Group.new(group_params)
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_url(@group), notice: "Category was successfully created." }
+        format.html { redirect_to group_url(@group), notice: 'Category was successfully created.' }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -32,7 +31,7 @@ class GroupsController < ApplicationController
     @group.destroy
 
     respond_to do |format|
-      format.html { redirect_to groups_url, notice: "Category was successfully destroyed." }
+      format.html { redirect_to groups_url, notice: 'Category was successfully destroyed.' }
     end
   end
 
