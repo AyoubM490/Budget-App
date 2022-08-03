@@ -11,6 +11,12 @@ A mobile web application where you can manage your budget: you have a list of tr
 
 - Ruby on Rails
 
+## Heroku
+https://save-budget-app.herokuapp.com/
+
+## Video
+https://www.loom.com/share/ed4614e3d9354df4917bb1047aa04b85
+
 ## Additional Tools
 
 - rubocop
