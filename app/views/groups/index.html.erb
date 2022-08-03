@@ -5,8 +5,10 @@
     <%= render "layouts/menu" %>
   </div>
 </nav>
+
 <section id="groups" class="container-fluid">
   <%= render "layouts/alerts" %>
+
   <div class="container my-5">
     <% @groups.each do |group| %>
       <%= link_to group_records_path(group), class: "text-decoration-none text-dark" do %>
@@ -15,6 +17,7 @@
     <% end %>
   </div>
 </section>
+
 <footer class="mt-auto p-3 border">
   <div class="text-center border border-white rounded">
     <%= link_to "Add Category", new_group_path, class: "text-decoration-none p-2 text-white new-btn" %>

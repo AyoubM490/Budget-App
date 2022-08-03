@@ -5,8 +5,10 @@
     <%= render "layouts/menu" %>
   </div>
 </nav>
+
 <section id="groups" class="container-fluid">
   <%= render "layouts/alerts" %>
+
   <div class="container my-5">
     <% @groups.each do |group| %>
       <%= link_to edit_group_path(group), class: "text-decoration-none text-dark" do %>
@@ -18,5 +20,6 @@
     <% end %>
   </div>
 </section>
+
 <div>
 </div>

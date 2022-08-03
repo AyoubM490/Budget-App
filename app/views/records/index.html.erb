@@ -5,17 +5,21 @@
     <%= render "layouts/menu" %>
   </div>
 </nav>
+
 <div id="records" class="container-fluid p-0">
   <%= render "groups/group", group: @group %>
   <%= render "layouts/alerts" %>
+
   <% @records.each do |record| %>
     <%= link_to group_record_path(record.group_id, record.id), class: "text-decoration-none text-dark" do %>
       <%= render record %>
     <% end %>
   <% end %>
 </div>
+
 <footer class="mt-auto p-3 border">
   <div class="text-center border border-white rounded">
     <%= link_to "New Transaction", new_group_record_path(@group), class: "text-decoration-none p-2 text-white new-btn" %>
   </div>
 </footer>
+

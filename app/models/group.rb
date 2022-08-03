@@ -12,6 +12,6 @@ class Group < ApplicationRecord
   end
 
   def total_records_amount
-    records_sum(:amount)
+    records.sum(:amount)
   end
 end

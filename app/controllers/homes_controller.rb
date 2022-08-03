@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  # GET /homes
   def index
     return unless user_signed_in?
 

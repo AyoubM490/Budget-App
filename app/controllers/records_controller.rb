@@ -1,20 +1,25 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[show edit update destroy]
 
+  # GET /records
   def index
     set_group
-    @records = Record.where(author_ir: current_user.id).where(groups_id: params[:group_id])
+    @records = Record.where(author_id: current_user.id).where(group_id: params[:group_id])
   end
 
+  # GET /records/1
   def show; end
 
+  # GET /records/new
   def new
     set_group
     @record = Record.new
   end
 
+  # GET /records/1/edit
   def edit; end
 
+  # POST /record
   def create
     set_group
     @record = current_user.records.new(record_params)
@@ -28,6 +33,7 @@ class RecordsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /records/1
   def update
     set_record
 
@@ -40,6 +46,7 @@ class RecordsController < ApplicationController
     end
   end
 
+  # DELETE /records/1
   def destroy
     set_group
     @record.destroy
@@ -51,6 +58,7 @@ class RecordsController < ApplicationController
 
   private
 
+  # Use callbacks to share common setup or constraints between actions.
   def set_record
     @record = Record.find(params[:id])
   end
@@ -59,6 +67,7 @@ class RecordsController < ApplicationController
     @group = Group.find(params[:group_id])
   end
 
+  # Only allow a list of trusted parameters through.
   def record_params
     params.require(:record).permit(:name, :amount, :group_id)
   end
