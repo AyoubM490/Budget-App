@@ -15,7 +15,7 @@ A mobile web application where you can manage your budget: you have a list of tr
 https://save-budget-app.herokuapp.com/
 
 ## Video
-https://www.loom.com/share/5403c8180d8a477d97084a61180a6282
+https://www.loom.com/share/2d68f7ca3b0d4a7ba6f26c5cbaa3e9b5
 
 ## Additional Tools
 
