@@ -27,7 +27,7 @@ To get a local copy of this project:
 
 Clone this repository or download the Zip folder:
 ```
-$ git clone git@github.com:KDlamini/Budget-app.git
+$ git clone git@github.com:AyoubMS/Budget-app.git
 ```
 Then:
 ```
